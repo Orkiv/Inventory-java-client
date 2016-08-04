@@ -35,11 +35,11 @@ Method | HTTP request | Description
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -90,11 +90,11 @@ This endpoint does not need any parameter.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -149,11 +149,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -210,11 +210,11 @@ If no ID is specified a new category will be created!
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -271,11 +271,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -330,11 +330,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -389,11 +389,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -448,11 +448,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -509,11 +509,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -568,11 +568,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -627,11 +627,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -686,11 +686,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -745,11 +745,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -816,11 +816,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -887,11 +887,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -946,11 +946,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1001,11 +1001,11 @@ This endpoint does not need any parameter.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1060,11 +1060,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1121,11 +1121,11 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1182,11 +1182,11 @@ Will ovveride the current event of the specified service.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import Inventory_java_client.ApiClient;
+//import Inventory_java_client.ApiException;
+//import Inventory_java_client.Configuration;
+//import Inventory_java_client.auth.*;
+//import Inventory_client.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
