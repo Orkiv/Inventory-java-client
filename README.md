@@ -58,10 +58,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import Inventory_java_client.*;
-import Inventory_java_client.auth.*;
-import Inventory_java_client.model.*;
-import Inventory_client.DefaultApi;
+import InventoryClient.*;
+import InventoryClient.auth.*;
+import InventoryClient.model.*;
+import InventoryClient.Api.DefaultApi;
 
 import java.io.File;
 import java.util.*;
