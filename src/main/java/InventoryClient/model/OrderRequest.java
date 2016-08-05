@@ -29,15 +29,13 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
- * Order
+ * OrderRequest
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
-public class Order   {
+public class OrderRequest   {
   @SerializedName("order_id")
   private String orderId = null;
 
@@ -95,10 +93,7 @@ public class Order   {
   @SerializedName("amount_total")
   private Float amountTotal = null;
 
-  @SerializedName("itemIDs")
-  private List<String> itemIDs = new ArrayList<String>();
-
-  public Order orderId(String orderId) {
+  public OrderRequest orderId(String orderId) {
     this.orderId = orderId;
     return this;
   }
@@ -116,7 +111,7 @@ public class Order   {
     this.orderId = orderId;
   }
 
-  public Order infoEmail(String infoEmail) {
+  public OrderRequest infoEmail(String infoEmail) {
     this.infoEmail = infoEmail;
     return this;
   }
@@ -134,7 +129,7 @@ public class Order   {
     this.infoEmail = infoEmail;
   }
 
-  public Order infoFirst(String infoFirst) {
+  public OrderRequest infoFirst(String infoFirst) {
     this.infoFirst = infoFirst;
     return this;
   }
@@ -152,7 +147,7 @@ public class Order   {
     this.infoFirst = infoFirst;
   }
 
-  public Order infoLast(String infoLast) {
+  public OrderRequest infoLast(String infoLast) {
     this.infoLast = infoLast;
     return this;
   }
@@ -170,7 +165,7 @@ public class Order   {
     this.infoLast = infoLast;
   }
 
-  public Order phone(String phone) {
+  public OrderRequest phone(String phone) {
     this.phone = phone;
     return this;
   }
@@ -188,7 +183,7 @@ public class Order   {
     this.phone = phone;
   }
 
-  public Order shipset(Boolean shipset) {
+  public OrderRequest shipset(Boolean shipset) {
     this.shipset = shipset;
     return this;
   }
@@ -206,7 +201,7 @@ public class Order   {
     this.shipset = shipset;
   }
 
-  public Order infoAdr1(String infoAdr1) {
+  public OrderRequest infoAdr1(String infoAdr1) {
     this.infoAdr1 = infoAdr1;
     return this;
   }
@@ -224,7 +219,7 @@ public class Order   {
     this.infoAdr1 = infoAdr1;
   }
 
-  public Order infoAdr2(String infoAdr2) {
+  public OrderRequest infoAdr2(String infoAdr2) {
     this.infoAdr2 = infoAdr2;
     return this;
   }
@@ -242,7 +237,7 @@ public class Order   {
     this.infoAdr2 = infoAdr2;
   }
 
-  public Order infoCty(String infoCty) {
+  public OrderRequest infoCty(String infoCty) {
     this.infoCty = infoCty;
     return this;
   }
@@ -260,7 +255,7 @@ public class Order   {
     this.infoCty = infoCty;
   }
 
-  public Order infoZip(String infoZip) {
+  public OrderRequest infoZip(String infoZip) {
     this.infoZip = infoZip;
     return this;
   }
@@ -278,7 +273,7 @@ public class Order   {
     this.infoZip = infoZip;
   }
 
-  public Order state(String state) {
+  public OrderRequest state(String state) {
     this.state = state;
     return this;
   }
@@ -296,7 +291,7 @@ public class Order   {
     this.state = state;
   }
 
-  public Order infoSadr1(String infoSadr1) {
+  public OrderRequest infoSadr1(String infoSadr1) {
     this.infoSadr1 = infoSadr1;
     return this;
   }
@@ -314,7 +309,7 @@ public class Order   {
     this.infoSadr1 = infoSadr1;
   }
 
-  public Order infoSadr2(String infoSadr2) {
+  public OrderRequest infoSadr2(String infoSadr2) {
     this.infoSadr2 = infoSadr2;
     return this;
   }
@@ -332,7 +327,7 @@ public class Order   {
     this.infoSadr2 = infoSadr2;
   }
 
-  public Order infoScty(String infoScty) {
+  public OrderRequest infoScty(String infoScty) {
     this.infoScty = infoScty;
     return this;
   }
@@ -350,7 +345,7 @@ public class Order   {
     this.infoScty = infoScty;
   }
 
-  public Order infoSzip(String infoSzip) {
+  public OrderRequest infoSzip(String infoSzip) {
     this.infoSzip = infoSzip;
     return this;
   }
@@ -368,7 +363,7 @@ public class Order   {
     this.infoSzip = infoSzip;
   }
 
-  public Order sstate(String sstate) {
+  public OrderRequest sstate(String sstate) {
     this.sstate = sstate;
     return this;
   }
@@ -386,7 +381,7 @@ public class Order   {
     this.sstate = sstate;
   }
 
-  public Order taxAmount(Float taxAmount) {
+  public OrderRequest taxAmount(Float taxAmount) {
     this.taxAmount = taxAmount;
     return this;
   }
@@ -404,7 +399,7 @@ public class Order   {
     this.taxAmount = taxAmount;
   }
 
-  public Order shippingAmount(Float shippingAmount) {
+  public OrderRequest shippingAmount(Float shippingAmount) {
     this.shippingAmount = shippingAmount;
     return this;
   }
@@ -422,7 +417,7 @@ public class Order   {
     this.shippingAmount = shippingAmount;
   }
 
-  public Order amountTotal(Float amountTotal) {
+  public OrderRequest amountTotal(Float amountTotal) {
     this.amountTotal = amountTotal;
     return this;
   }
@@ -440,24 +435,6 @@ public class Order   {
     this.amountTotal = amountTotal;
   }
 
-  public Order itemIDs(List<String> itemIDs) {
-    this.itemIDs = itemIDs;
-    return this;
-  }
-
-   /**
-   * Array of items purchased at checkout
-   * @return itemIDs
-  **/
-  @ApiModelProperty(example = "null", value = "Array of items purchased at checkout")
-  public List<String> getItemIDs() {
-    return itemIDs;
-  }
-
-  public void setItemIDs(List<String> itemIDs) {
-    this.itemIDs = itemIDs;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -467,38 +444,37 @@ public class Order   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Order order = (Order) o;
-    return Objects.equals(this.orderId, order.orderId) &&
-        Objects.equals(this.infoEmail, order.infoEmail) &&
-        Objects.equals(this.infoFirst, order.infoFirst) &&
-        Objects.equals(this.infoLast, order.infoLast) &&
-        Objects.equals(this.phone, order.phone) &&
-        Objects.equals(this.shipset, order.shipset) &&
-        Objects.equals(this.infoAdr1, order.infoAdr1) &&
-        Objects.equals(this.infoAdr2, order.infoAdr2) &&
-        Objects.equals(this.infoCty, order.infoCty) &&
-        Objects.equals(this.infoZip, order.infoZip) &&
-        Objects.equals(this.state, order.state) &&
-        Objects.equals(this.infoSadr1, order.infoSadr1) &&
-        Objects.equals(this.infoSadr2, order.infoSadr2) &&
-        Objects.equals(this.infoScty, order.infoScty) &&
-        Objects.equals(this.infoSzip, order.infoSzip) &&
-        Objects.equals(this.sstate, order.sstate) &&
-        Objects.equals(this.taxAmount, order.taxAmount) &&
-        Objects.equals(this.shippingAmount, order.shippingAmount) &&
-        Objects.equals(this.amountTotal, order.amountTotal) &&
-        Objects.equals(this.itemIDs, order.itemIDs);
+    OrderRequest orderRequest = (OrderRequest) o;
+    return Objects.equals(this.orderId, orderRequest.orderId) &&
+        Objects.equals(this.infoEmail, orderRequest.infoEmail) &&
+        Objects.equals(this.infoFirst, orderRequest.infoFirst) &&
+        Objects.equals(this.infoLast, orderRequest.infoLast) &&
+        Objects.equals(this.phone, orderRequest.phone) &&
+        Objects.equals(this.shipset, orderRequest.shipset) &&
+        Objects.equals(this.infoAdr1, orderRequest.infoAdr1) &&
+        Objects.equals(this.infoAdr2, orderRequest.infoAdr2) &&
+        Objects.equals(this.infoCty, orderRequest.infoCty) &&
+        Objects.equals(this.infoZip, orderRequest.infoZip) &&
+        Objects.equals(this.state, orderRequest.state) &&
+        Objects.equals(this.infoSadr1, orderRequest.infoSadr1) &&
+        Objects.equals(this.infoSadr2, orderRequest.infoSadr2) &&
+        Objects.equals(this.infoScty, orderRequest.infoScty) &&
+        Objects.equals(this.infoSzip, orderRequest.infoSzip) &&
+        Objects.equals(this.sstate, orderRequest.sstate) &&
+        Objects.equals(this.taxAmount, orderRequest.taxAmount) &&
+        Objects.equals(this.shippingAmount, orderRequest.shippingAmount) &&
+        Objects.equals(this.amountTotal, orderRequest.amountTotal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, infoEmail, infoFirst, infoLast, phone, shipset, infoAdr1, infoAdr2, infoCty, infoZip, state, infoSadr1, infoSadr2, infoScty, infoSzip, sstate, taxAmount, shippingAmount, amountTotal, itemIDs);
+    return Objects.hash(orderId, infoEmail, infoFirst, infoLast, phone, shipset, infoAdr1, infoAdr2, infoCty, infoZip, state, infoSadr1, infoSadr2, infoScty, infoSzip, sstate, taxAmount, shippingAmount, amountTotal);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Order {\n");
+    sb.append("class OrderRequest {\n");
     
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    infoEmail: ").append(toIndentedString(infoEmail)).append("\n");
@@ -519,7 +495,6 @@ public class Order   {
     sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
     sb.append("    shippingAmount: ").append(toIndentedString(shippingAmount)).append("\n");
     sb.append("    amountTotal: ").append(toIndentedString(amountTotal)).append("\n");
-    sb.append("    itemIDs: ").append(toIndentedString(itemIDs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

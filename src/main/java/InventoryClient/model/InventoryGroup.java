@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * InventoryGroup
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T15:26:50.334-04:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
 public class InventoryGroup   {
   @SerializedName("name")
   private String name = null;

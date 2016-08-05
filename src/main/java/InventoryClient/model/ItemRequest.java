@@ -26,20 +26,17 @@
 package InventoryClient.model;
 
 import java.util.Objects;
-import InventoryClient.model.Variation;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
- * Item
+ * ItemRequest
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
-public class Item   {
+public class ItemRequest   {
   @SerializedName("id")
   private String id = null;
 
@@ -58,19 +55,10 @@ public class Item   {
   @SerializedName("price")
   private String price = null;
 
-  @SerializedName("variations")
-  private List<Variation> variations = new ArrayList<Variation>();
-
   @SerializedName("quantity")
   private String quantity = null;
 
-  @SerializedName("media")
-  private List<String> media = new ArrayList<String>();
-
-  @SerializedName("Buy")
-  private String buy = null;
-
-  public Item id(String id) {
+  public ItemRequest id(String id) {
     this.id = id;
     return this;
   }
@@ -88,7 +76,7 @@ public class Item   {
     this.id = id;
   }
 
-  public Item category(String category) {
+  public ItemRequest category(String category) {
     this.category = category;
     return this;
   }
@@ -106,7 +94,7 @@ public class Item   {
     this.category = category;
   }
 
-  public Item desc(String desc) {
+  public ItemRequest desc(String desc) {
     this.desc = desc;
     return this;
   }
@@ -124,7 +112,7 @@ public class Item   {
     this.desc = desc;
   }
 
-  public Item name(String name) {
+  public ItemRequest name(String name) {
     this.name = name;
     return this;
   }
@@ -142,7 +130,7 @@ public class Item   {
     this.name = name;
   }
 
-  public Item ordprice(BigDecimal ordprice) {
+  public ItemRequest ordprice(BigDecimal ordprice) {
     this.ordprice = ordprice;
     return this;
   }
@@ -160,7 +148,7 @@ public class Item   {
     this.ordprice = ordprice;
   }
 
-  public Item price(String price) {
+  public ItemRequest price(String price) {
     this.price = price;
     return this;
   }
@@ -178,25 +166,7 @@ public class Item   {
     this.price = price;
   }
 
-  public Item variations(List<Variation> variations) {
-    this.variations = variations;
-    return this;
-  }
-
-   /**
-   * Get variations
-   * @return variations
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<Variation> getVariations() {
-    return variations;
-  }
-
-  public void setVariations(List<Variation> variations) {
-    this.variations = variations;
-  }
-
-  public Item quantity(String quantity) {
+  public ItemRequest quantity(String quantity) {
     this.quantity = quantity;
     return this;
   }
@@ -214,42 +184,6 @@ public class Item   {
     this.quantity = quantity;
   }
 
-  public Item media(List<String> media) {
-    this.media = media;
-    return this;
-  }
-
-   /**
-   * Array of item media
-   * @return media
-  **/
-  @ApiModelProperty(example = "null", value = "Array of item media")
-  public List<String> getMedia() {
-    return media;
-  }
-
-  public void setMedia(List<String> media) {
-    this.media = media;
-  }
-
-  public Item buy(String buy) {
-    this.buy = buy;
-    return this;
-  }
-
-   /**
-   * Link to checkout page of item
-   * @return buy
-  **/
-  @ApiModelProperty(example = "null", value = "Link to checkout page of item")
-  public String getBuy() {
-    return buy;
-  }
-
-  public void setBuy(String buy) {
-    this.buy = buy;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -259,28 +193,25 @@ public class Item   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Item item = (Item) o;
-    return Objects.equals(this.id, item.id) &&
-        Objects.equals(this.category, item.category) &&
-        Objects.equals(this.desc, item.desc) &&
-        Objects.equals(this.name, item.name) &&
-        Objects.equals(this.ordprice, item.ordprice) &&
-        Objects.equals(this.price, item.price) &&
-        Objects.equals(this.variations, item.variations) &&
-        Objects.equals(this.quantity, item.quantity) &&
-        Objects.equals(this.media, item.media) &&
-        Objects.equals(this.buy, item.buy);
+    ItemRequest itemRequest = (ItemRequest) o;
+    return Objects.equals(this.id, itemRequest.id) &&
+        Objects.equals(this.category, itemRequest.category) &&
+        Objects.equals(this.desc, itemRequest.desc) &&
+        Objects.equals(this.name, itemRequest.name) &&
+        Objects.equals(this.ordprice, itemRequest.ordprice) &&
+        Objects.equals(this.price, itemRequest.price) &&
+        Objects.equals(this.quantity, itemRequest.quantity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, category, desc, name, ordprice, price, variations, quantity, media, buy);
+    return Objects.hash(id, category, desc, name, ordprice, price, quantity);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Item {\n");
+    sb.append("class ItemRequest {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
@@ -288,10 +219,7 @@ public class Item   {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    ordprice: ").append(toIndentedString(ordprice)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    variations: ").append(toIndentedString(variations)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    sb.append("    media: ").append(toIndentedString(media)).append("\n");
-    sb.append("    buy: ").append(toIndentedString(buy)).append("\n");
     sb.append("}");
     return sb.toString();
   }

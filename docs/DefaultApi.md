@@ -11,17 +11,24 @@ Method | HTTP request | Description
 [**itemAddPost**](DefaultApi.md#itemAddPost) | **POST** /item/add/ | 
 [**itemAddbulkPost**](DefaultApi.md#itemAddbulkPost) | **POST** /item/addbulk/ | 
 [**itemDelete**](DefaultApi.md#itemDelete) | **DELETE** /item/ | 
+[**itemGet**](DefaultApi.md#itemGet) | **GET** /item/ | 
+[**itemMediaDelete**](DefaultApi.md#itemMediaDelete) | **DELETE** /item-media/ | 
+[**itemMediaPost**](DefaultApi.md#itemMediaPost) | **POST** /item-media/ | 
 [**itemPut**](DefaultApi.md#itemPut) | **PUT** /item/ | 
 [**itemsCountPost**](DefaultApi.md#itemsCountPost) | **POST** /items/count/ | 
 [**itemsPost**](DefaultApi.md#itemsPost) | **POST** /items/ | 
-[**itemsallfieldsPost**](DefaultApi.md#itemsallfieldsPost) | **POST** /items/?allfields | 
 [**ordersPost**](DefaultApi.md#ordersPost) | **POST** /orders/ | 
+[**ordersServicesPost**](DefaultApi.md#ordersServicesPost) | **POST** /orders/services/ | 
 [**queryPost**](DefaultApi.md#queryPost) | **POST** /query/ | 
-[**queryallfieldsPost**](DefaultApi.md#queryallfieldsPost) | **POST** /query/?allfields | 
 [**servicesDelete**](DefaultApi.md#servicesDelete) | **DELETE** /services/ | 
 [**servicesGet**](DefaultApi.md#servicesGet) | **GET** /services/ | 
+[**servicesOpenGet**](DefaultApi.md#servicesOpenGet) | **GET** /services/open/ | 
 [**servicesPost**](DefaultApi.md#servicesPost) | **POST** /services/ | 
 [**servicesPut**](DefaultApi.md#servicesPut) | **PUT** /services/ | 
+[**variationDelete**](DefaultApi.md#variationDelete) | **DELETE** /variation/ | 
+[**variationGet**](DefaultApi.md#variationGet) | **GET** /variation/ | 
+[**variationPost**](DefaultApi.md#variationPost) | **POST** /variation/ | 
+[**variationPut**](DefaultApi.md#variationPut) | **PUT** /variation/ | 
 [**writeDelete**](DefaultApi.md#writeDelete) | **DELETE** /write/ | 
 [**writePost**](DefaultApi.md#writePost) | **POST** /write/ | 
 
@@ -170,7 +177,7 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Dictionary query = new Dictionary(); // Dictionary | Category to query against system
+Category query = new Category(); // Category | Category to query against system
 try {
     List<Category> result = apiInstance.categoriesPost(query);
     System.out.println(result);
@@ -184,7 +191,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Dictionary**](Dictionary.md)| Category to query against system | [optional]
+ **query** | [**Category**](Category.md)| Category to query against system | [optional]
 
 ### Return type
 
@@ -292,7 +299,7 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Item item = new Item(); // Item | Item to create.
+ItemRequest item = new ItemRequest(); // ItemRequest | Item to create.
 try {
     Item result = apiInstance.itemAddPost(item);
     System.out.println(result);
@@ -306,7 +313,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item** | [**Item**](Item.md)| Item to create. |
+ **item** | [**ItemRequest**](ItemRequest.md)| Item to create. |
 
 ### Return type
 
@@ -351,7 +358,7 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-List<Item> items = Arrays.asList(new Item()); // List<Item> | Items to create.
+List<ItemRequest> items = Arrays.asList(new ItemRequest()); // List<ItemRequest> | Items to create.
 try {
     Response result = apiInstance.itemAddbulkPost(items);
     System.out.println(result);
@@ -365,7 +372,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **items** | [**List&lt;Item&gt;**](Item.md)| Items to create. |
+ **items** | [**List&lt;ItemRequest&gt;**](ItemRequest.md)| Items to create. |
 
 ### Return type
 
@@ -439,6 +446,187 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="itemGet"></a>
+# **itemGet**
+> Item itemGet(id)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | Item ID to open.
+try {
+    Item result = apiInstance.itemGet(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#itemGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Item ID to open. |
+
+### Return type
+
+[**Item**](Item.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="itemMediaDelete"></a>
+# **itemMediaDelete**
+> Response itemMediaDelete(imageurl)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String imageurl = "imageurl_example"; // String | URL of image to remove
+try {
+    Response result = apiInstance.itemMediaDelete(imageurl);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#itemMediaDelete");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageurl** | **String**| URL of image to remove |
+
+### Return type
+
+[**Response**](Response.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="itemMediaPost"></a>
+# **itemMediaPost**
+> String itemMediaPost(id, image)
+
+
+
+This endpoint is currently in testing.
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | Valid item id to bind image to.
+File image = new File("/path/to/file.txt"); // File | Image.
+try {
+    String result = apiInstance.itemMediaPost(id, image);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#itemMediaPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Valid item id to bind image to. |
+ **image** | **File**| Image. |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
+
 <a name="itemPut"></a>
 # **itemPut**
 > Response itemPut(id, item)
@@ -470,7 +658,7 @@ AccountID.setApiKey("YOUR API KEY");
 
 DefaultApi apiInstance = new DefaultApi();
 String id = "id_example"; // String | item id to update.
-Dictionary item = new Dictionary(); // Dictionary | New item information.
+ItemRequest item = new ItemRequest(); // ItemRequest | New item information.
 try {
     Response result = apiInstance.itemPut(id, item);
     System.out.println(result);
@@ -485,7 +673,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| item id to update. |
- **item** | [**Dictionary**](Dictionary.md)| New item information. |
+ **item** | [**ItemRequest**](ItemRequest.md)| New item information. |
 
 ### Return type
 
@@ -502,7 +690,7 @@ Name | Type | Description  | Notes
 
 <a name="itemsCountPost"></a>
 # **itemsCountPost**
-> BigDecimal itemsCountPost(query)
+> BigDecimal itemsCountPost(minprice, maxprice, query)
 
 
 
@@ -530,9 +718,11 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Dictionary query = new Dictionary(); // Dictionary | Item to query against system.
+BigDecimal minprice = new BigDecimal(); // BigDecimal | Min price of items to find
+BigDecimal maxprice = new BigDecimal(); // BigDecimal | Max price of items to find
+ItemRequest query = new ItemRequest(); // ItemRequest | Item to query against system.
 try {
-    BigDecimal result = apiInstance.itemsCountPost(query);
+    BigDecimal result = apiInstance.itemsCountPost(minprice, maxprice, query);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#itemsCountPost");
@@ -544,7 +734,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Dictionary**](Dictionary.md)| Item to query against system. | [optional]
+ **minprice** | **BigDecimal**| Min price of items to find | [optional]
+ **maxprice** | **BigDecimal**| Max price of items to find | [optional]
+ **query** | [**ItemRequest**](ItemRequest.md)| Item to query against system. | [optional]
 
 ### Return type
 
@@ -561,7 +753,7 @@ Name | Type | Description  | Notes
 
 <a name="itemsPost"></a>
 # **itemsPost**
-> List&lt;Item&gt; itemsPost(query)
+> List&lt;Item&gt; itemsPost(minprice, maxprice, query)
 
 
 
@@ -589,9 +781,11 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Dictionary query = new Dictionary(); // Dictionary | Item to query against system.
+BigDecimal minprice = new BigDecimal(); // BigDecimal | Min price of items to find
+BigDecimal maxprice = new BigDecimal(); // BigDecimal | Max price of items to find
+ItemRequest query = new ItemRequest(); // ItemRequest | Item to query against system.
 try {
-    List<Item> result = apiInstance.itemsPost(query);
+    List<Item> result = apiInstance.itemsPost(minprice, maxprice, query);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#itemsPost");
@@ -603,70 +797,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Dictionary**](Dictionary.md)| Item to query against system. | [optional]
+ **minprice** | **BigDecimal**| Min price of items to find | [optional]
+ **maxprice** | **BigDecimal**| Max price of items to find | [optional]
+ **query** | [**ItemRequest**](ItemRequest.md)| Item to query against system. | [optional]
 
 ### Return type
 
 [**List&lt;Item&gt;**](Item.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="itemsallfieldsPost"></a>
-# **itemsallfieldsPost**
-> List&lt;Dictionary&gt; itemsallfieldsPost(query)
-
-
-
-### Example
-```java
-// Import classes:
-//import InventoryClient.ApiClient;
-//import InventoryClient.ApiException;
-//import InventoryClient.Configuration;
-//import InventoryClient.auth.*;
-//import InventoryClient.Api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API key authorization: APIKey
-ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
-APIKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.setApiKeyPrefix("Token");
-
-// Configure API key authorization: AccountID
-ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
-AccountID.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//AccountID.setApiKeyPrefix("Token");
-
-DefaultApi apiInstance = new DefaultApi();
-Dictionary query = new Dictionary(); // Dictionary | Item to query against system.
-try {
-    List<Dictionary> result = apiInstance.itemsallfieldsPost(query);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#itemsallfieldsPost");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **query** | [**Dictionary**](Dictionary.md)| Item to query against system. | [optional]
-
-### Return type
-
-[**List&lt;Dictionary&gt;**](Dictionary.md)
 
 ### Authorization
 
@@ -707,7 +844,7 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Dictionary query = new Dictionary(); // Dictionary | Order to query against system.
+OrderRequest query = new OrderRequest(); // OrderRequest | Order to query against item invoices.
 try {
     List<Order> result = apiInstance.ordersPost(query);
     System.out.println(result);
@@ -721,7 +858,66 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Dictionary**](Dictionary.md)| Order to query against system. | [optional]
+ **query** | [**OrderRequest**](OrderRequest.md)| Order to query against item invoices. | [optional]
+
+### Return type
+
+[**List&lt;Order&gt;**](Order.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="ordersServicesPost"></a>
+# **ordersServicesPost**
+> List&lt;Order&gt; ordersServicesPost(query)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+OrderRequest query = new OrderRequest(); // OrderRequest | Order to query against service invoices.
+try {
+    List<Order> result = apiInstance.ordersServicesPost(query);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#ordersServicesPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | [**OrderRequest**](OrderRequest.md)| Order to query against service invoices. | [optional]
 
 ### Return type
 
@@ -770,9 +966,9 @@ BigDecimal page = new BigDecimal(); // BigDecimal | Current page index.
 String categoryid = "categoryid_example"; // String | Get items under specified category id.
 String sort = "sort_example"; // String | Comma delimited Sort string. ie ; +ordprice. Please use number based fields only
 String search = "search_example"; // String | Performs a regex pattern match against the items within your account
-BigDecimal minprice = new BigDecimal(); // BigDecimal | Min price in hundreds.
-BigDecimal maxprice = new BigDecimal(); // BigDecimal | Max price in hudreds.
-Dictionary query = new Dictionary(); // Dictionary | Custom parameters to query against system.
+BigDecimal minprice = new BigDecimal(); // BigDecimal | Min price in hundreds (cents).
+BigDecimal maxprice = new BigDecimal(); // BigDecimal | Max price in hundreds (cents).
+ItemRequest query = new ItemRequest(); // ItemRequest | Custom parameters to query against system.
 try {
     List<Item> result = apiInstance.queryPost(page, categoryid, sort, search, minprice, maxprice, query);
     System.out.println(result);
@@ -790,84 +986,13 @@ Name | Type | Description  | Notes
  **categoryid** | **String**| Get items under specified category id. | [optional]
  **sort** | **String**| Comma delimited Sort string. ie ; +ordprice. Please use number based fields only | [optional]
  **search** | **String**| Performs a regex pattern match against the items within your account | [optional]
- **minprice** | **BigDecimal**| Min price in hundreds. | [optional]
- **maxprice** | **BigDecimal**| Max price in hudreds. | [optional]
- **query** | [**Dictionary**](Dictionary.md)| Custom parameters to query against system. | [optional]
+ **minprice** | **BigDecimal**| Min price in hundreds (cents). | [optional]
+ **maxprice** | **BigDecimal**| Max price in hundreds (cents). | [optional]
+ **query** | [**ItemRequest**](ItemRequest.md)| Custom parameters to query against system. | [optional]
 
 ### Return type
 
 [**List&lt;Item&gt;**](Item.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="queryallfieldsPost"></a>
-# **queryallfieldsPost**
-> List&lt;Dictionary&gt; queryallfieldsPost(page, categoryid, sort, search, minprice, maxprice, query)
-
-
-
-### Example
-```java
-// Import classes:
-//import InventoryClient.ApiClient;
-//import InventoryClient.ApiException;
-//import InventoryClient.Configuration;
-//import InventoryClient.auth.*;
-//import InventoryClient.Api.DefaultApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API key authorization: APIKey
-ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
-APIKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.setApiKeyPrefix("Token");
-
-// Configure API key authorization: AccountID
-ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
-AccountID.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//AccountID.setApiKeyPrefix("Token");
-
-DefaultApi apiInstance = new DefaultApi();
-BigDecimal page = new BigDecimal(); // BigDecimal | Current page index.
-String categoryid = "categoryid_example"; // String | Get items under specified category id.
-String sort = "sort_example"; // String | Comma delimited Sort string. ie ; +ordprice. Please use number based fields only
-String search = "search_example"; // String | Performs a regex pattern match against the items within your account
-BigDecimal minprice = new BigDecimal(); // BigDecimal | Min price in hundreds.
-BigDecimal maxprice = new BigDecimal(); // BigDecimal | Max price in hudreds.
-Dictionary query = new Dictionary(); // Dictionary | Custom parameters to query against system.
-try {
-    List<Dictionary> result = apiInstance.queryallfieldsPost(page, categoryid, sort, search, minprice, maxprice, query);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#queryallfieldsPost");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **BigDecimal**| Current page index. | [optional]
- **categoryid** | **String**| Get items under specified category id. | [optional]
- **sort** | **String**| Comma delimited Sort string. ie ; +ordprice. Please use number based fields only | [optional]
- **search** | **String**| Performs a regex pattern match against the items within your account | [optional]
- **minprice** | **BigDecimal**| Min price in hundreds. | [optional]
- **maxprice** | **BigDecimal**| Max price in hudreds. | [optional]
- **query** | [**Dictionary**](Dictionary.md)| Custom parameters to query against system. | [optional]
-
-### Return type
-
-[**List&lt;Dictionary&gt;**](Dictionary.md)
 
 ### Authorization
 
@@ -992,6 +1117,65 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="servicesOpenGet"></a>
+# **servicesOpenGet**
+> Service servicesOpenGet(id)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | ID of service to open
+try {
+    Service result = apiInstance.servicesOpenGet(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#servicesOpenGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ID of service to open |
+
+### Return type
+
+[**Service**](Service.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="servicesPost"></a>
 # **servicesPost**
 > Service servicesPost(service)
@@ -1022,7 +1206,7 @@ AccountID.setApiKey("YOUR API KEY");
 //AccountID.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
-Service service = new Service(); // Service | Service to create.
+ServiceRequest service = new ServiceRequest(); // ServiceRequest | Service to create.
 try {
     Service result = apiInstance.servicesPost(service);
     System.out.println(result);
@@ -1036,7 +1220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service** | [**Service**](Service.md)| Service to create. |
+ **service** | [**ServiceRequest**](ServiceRequest.md)| Service to create. |
 
 ### Return type
 
@@ -1082,7 +1266,7 @@ AccountID.setApiKey("YOUR API KEY");
 
 DefaultApi apiInstance = new DefaultApi();
 String id = "id_example"; // String | ID of the service to update
-Service service = new Service(); // Service | New service data to set.
+ServiceRequest service = new ServiceRequest(); // ServiceRequest | New service data to set.
 try {
     Response result = apiInstance.servicesPut(id, service);
     System.out.println(result);
@@ -1097,7 +1281,247 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ID of the service to update |
- **service** | [**Service**](Service.md)| New service data to set. |
+ **service** | [**ServiceRequest**](ServiceRequest.md)| New service data to set. |
+
+### Return type
+
+[**Response**](Response.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="variationDelete"></a>
+# **variationDelete**
+> Response variationDelete(id)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | variation id to remove
+try {
+    Response result = apiInstance.variationDelete(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#variationDelete");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| variation id to remove |
+
+### Return type
+
+[**Response**](Response.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="variationGet"></a>
+# **variationGet**
+> Variation variationGet(id)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | Variation ID to open.
+try {
+    Variation result = apiInstance.variationGet(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#variationGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Variation ID to open. |
+
+### Return type
+
+[**Variation**](Variation.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="variationPost"></a>
+# **variationPost**
+> Response variationPost(id, item)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | Valid item id to bind variation to.
+Variation item = new Variation(); // Variation | Variation information.
+try {
+    Response result = apiInstance.variationPost(id, item);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#variationPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Valid item id to bind variation to. |
+ **item** | [**Variation**](Variation.md)| Variation information. |
+
+### Return type
+
+[**Response**](Response.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccountID](../README.md#AccountID)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="variationPut"></a>
+# **variationPut**
+> Response variationPut(id, item)
+
+
+
+### Example
+```java
+// Import classes:
+//import InventoryClient.ApiClient;
+//import InventoryClient.ApiException;
+//import InventoryClient.Configuration;
+//import InventoryClient.auth.*;
+//import InventoryClient.Api.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: APIKey
+ApiKeyAuth APIKey = (ApiKeyAuth) defaultClient.getAuthentication("APIKey");
+APIKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.setApiKeyPrefix("Token");
+
+// Configure API key authorization: AccountID
+ApiKeyAuth AccountID = (ApiKeyAuth) defaultClient.getAuthentication("AccountID");
+AccountID.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//AccountID.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | variation id to update.
+Variation item = new Variation(); // Variation | New variation information.
+try {
+    Response result = apiInstance.variationPut(id, item);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#variationPut");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| variation id to update. |
+ **item** | [**Variation**](Variation.md)| New variation information. |
 
 ### Return type
 

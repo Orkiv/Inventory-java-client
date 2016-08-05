@@ -26,7 +26,6 @@
 package InventoryClient.model;
 
 import java.util.Objects;
-import InventoryClient.model.Dictionary;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -35,7 +34,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * EventRequest
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T15:26:50.334-04:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
 public class EventRequest   {
   @SerializedName("url")
   private String url = null;
@@ -44,7 +43,7 @@ public class EventRequest   {
   private String serviceid = null;
 
   @SerializedName("postbody")
-  private Dictionary postbody = null;
+  private String postbody = null;
 
   public EventRequest url(String url) {
     this.url = url;
@@ -82,21 +81,21 @@ public class EventRequest   {
     this.serviceid = serviceid;
   }
 
-  public EventRequest postbody(Dictionary postbody) {
+  public EventRequest postbody(String postbody) {
     this.postbody = postbody;
     return this;
   }
 
    /**
-   * Get postbody
+   * Valid JSON of Key-value parameters to post to url
    * @return postbody
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Dictionary getPostbody() {
+  @ApiModelProperty(example = "null", value = "Valid JSON of Key-value parameters to post to url")
+  public String getPostbody() {
     return postbody;
   }
 
-  public void setPostbody(Dictionary postbody) {
+  public void setPostbody(String postbody) {
     this.postbody = postbody;
   }
 

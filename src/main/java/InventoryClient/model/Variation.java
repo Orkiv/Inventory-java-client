@@ -29,32 +29,33 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 /**
- * Category
+ * Variation
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
-public class Category   {
+public class Variation   {
   @SerializedName("name")
   private String name = null;
+
+  @SerializedName("priceChange")
+  private BigDecimal priceChange = null;
 
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("parent")
-  private String parent = null;
-
-  public Category name(String name) {
+  public Variation name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Name of category
+   * Variation name
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "Name of category")
+  @ApiModelProperty(example = "null", value = "Variation name")
   public String getName() {
     return name;
   }
@@ -63,40 +64,40 @@ public class Category   {
     this.name = name;
   }
 
-  public Category id(String id) {
+  public Variation priceChange(BigDecimal priceChange) {
+    this.priceChange = priceChange;
+    return this;
+  }
+
+   /**
+   * New price to set if variation is set (in hundreds)
+   * @return priceChange
+  **/
+  @ApiModelProperty(example = "null", value = "New price to set if variation is set (in hundreds)")
+  public BigDecimal getPriceChange() {
+    return priceChange;
+  }
+
+  public void setPriceChange(BigDecimal priceChange) {
+    this.priceChange = priceChange;
+  }
+
+  public Variation id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * ID of category
+   * System ID of variation
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "ID of category")
+  @ApiModelProperty(example = "null", value = "System ID of variation")
   public String getId() {
     return id;
   }
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public Category parent(String parent) {
-    this.parent = parent;
-    return this;
-  }
-
-   /**
-   * ID of parent element. Top level categories are set to root.
-   * @return parent
-  **/
-  @ApiModelProperty(example = "null", value = "ID of parent element. Top level categories are set to root.")
-  public String getParent() {
-    return parent;
-  }
-
-  public void setParent(String parent) {
-    this.parent = parent;
   }
 
 
@@ -108,25 +109,25 @@ public class Category   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Category category = (Category) o;
-    return Objects.equals(this.name, category.name) &&
-        Objects.equals(this.id, category.id) &&
-        Objects.equals(this.parent, category.parent);
+    Variation variation = (Variation) o;
+    return Objects.equals(this.name, variation.name) &&
+        Objects.equals(this.priceChange, variation.priceChange) &&
+        Objects.equals(this.id, variation.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id, parent);
+    return Objects.hash(name, priceChange, id);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Category {\n");
+    sb.append("class Variation {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    priceChange: ").append(toIndentedString(priceChange)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    parent: ").append(toIndentedString(parent)).append("\n");
     sb.append("}");
     return sb.toString();
   }

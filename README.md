@@ -109,17 +109,24 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**itemAddPost**](docs/DefaultApi.md#itemAddPost) | **POST** /item/add/ | 
 *DefaultApi* | [**itemAddbulkPost**](docs/DefaultApi.md#itemAddbulkPost) | **POST** /item/addbulk/ | 
 *DefaultApi* | [**itemDelete**](docs/DefaultApi.md#itemDelete) | **DELETE** /item/ | 
+*DefaultApi* | [**itemGet**](docs/DefaultApi.md#itemGet) | **GET** /item/ | 
+*DefaultApi* | [**itemMediaDelete**](docs/DefaultApi.md#itemMediaDelete) | **DELETE** /item-media/ | 
+*DefaultApi* | [**itemMediaPost**](docs/DefaultApi.md#itemMediaPost) | **POST** /item-media/ | 
 *DefaultApi* | [**itemPut**](docs/DefaultApi.md#itemPut) | **PUT** /item/ | 
 *DefaultApi* | [**itemsCountPost**](docs/DefaultApi.md#itemsCountPost) | **POST** /items/count/ | 
 *DefaultApi* | [**itemsPost**](docs/DefaultApi.md#itemsPost) | **POST** /items/ | 
-*DefaultApi* | [**itemsallfieldsPost**](docs/DefaultApi.md#itemsallfieldsPost) | **POST** /items/?allfields | 
 *DefaultApi* | [**ordersPost**](docs/DefaultApi.md#ordersPost) | **POST** /orders/ | 
+*DefaultApi* | [**ordersServicesPost**](docs/DefaultApi.md#ordersServicesPost) | **POST** /orders/services/ | 
 *DefaultApi* | [**queryPost**](docs/DefaultApi.md#queryPost) | **POST** /query/ | 
-*DefaultApi* | [**queryallfieldsPost**](docs/DefaultApi.md#queryallfieldsPost) | **POST** /query/?allfields | 
 *DefaultApi* | [**servicesDelete**](docs/DefaultApi.md#servicesDelete) | **DELETE** /services/ | 
 *DefaultApi* | [**servicesGet**](docs/DefaultApi.md#servicesGet) | **GET** /services/ | 
+*DefaultApi* | [**servicesOpenGet**](docs/DefaultApi.md#servicesOpenGet) | **GET** /services/open/ | 
 *DefaultApi* | [**servicesPost**](docs/DefaultApi.md#servicesPost) | **POST** /services/ | 
 *DefaultApi* | [**servicesPut**](docs/DefaultApi.md#servicesPut) | **PUT** /services/ | 
+*DefaultApi* | [**variationDelete**](docs/DefaultApi.md#variationDelete) | **DELETE** /variation/ | 
+*DefaultApi* | [**variationGet**](docs/DefaultApi.md#variationGet) | **GET** /variation/ | 
+*DefaultApi* | [**variationPost**](docs/DefaultApi.md#variationPost) | **POST** /variation/ | 
+*DefaultApi* | [**variationPut**](docs/DefaultApi.md#variationPut) | **PUT** /variation/ | 
 *DefaultApi* | [**writeDelete**](docs/DefaultApi.md#writeDelete) | **DELETE** /write/ | 
 *DefaultApi* | [**writePost**](docs/DefaultApi.md#writePost) | **POST** /write/ | 
 
@@ -127,14 +134,17 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Category](docs/Category.md)
- - [Dictionary](docs/Dictionary.md)
  - [Error](docs/Error.md)
  - [EventRequest](docs/EventRequest.md)
  - [InventoryGroup](docs/InventoryGroup.md)
  - [Item](docs/Item.md)
+ - [ItemRequest](docs/ItemRequest.md)
  - [Order](docs/Order.md)
+ - [OrderRequest](docs/OrderRequest.md)
  - [Response](docs/Response.md)
  - [Service](docs/Service.md)
+ - [ServiceRequest](docs/ServiceRequest.md)
+ - [Variation](docs/Variation.md)
 
 
 ## Documentation for Authorization

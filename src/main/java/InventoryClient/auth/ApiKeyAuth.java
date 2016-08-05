@@ -30,7 +30,7 @@ import InventoryClient.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T15:26:50.334-04:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

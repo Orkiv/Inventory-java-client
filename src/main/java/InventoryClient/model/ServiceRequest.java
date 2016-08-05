@@ -26,17 +26,16 @@
 package InventoryClient.model;
 
 import java.util.Objects;
-import InventoryClient.model.EventRequest;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Service
+ * ServiceRequest
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-05T15:11:04.542-04:00")
-public class Service   {
+public class ServiceRequest   {
   @SerializedName("name")
   private String name = null;
 
@@ -46,13 +45,10 @@ public class Service   {
   @SerializedName("price")
   private String price = null;
 
-  @SerializedName("event")
-  private EventRequest event = null;
-
   @SerializedName("recurpric")
   private String recurpric = null;
 
-  public Service name(String name) {
+  public ServiceRequest name(String name) {
     this.name = name;
     return this;
   }
@@ -70,7 +66,7 @@ public class Service   {
     this.name = name;
   }
 
-  public Service desc(String desc) {
+  public ServiceRequest desc(String desc) {
     this.desc = desc;
     return this;
   }
@@ -88,7 +84,7 @@ public class Service   {
     this.desc = desc;
   }
 
-  public Service price(String price) {
+  public ServiceRequest price(String price) {
     this.price = price;
     return this;
   }
@@ -106,25 +102,7 @@ public class Service   {
     this.price = price;
   }
 
-  public Service event(EventRequest event) {
-    this.event = event;
-    return this;
-  }
-
-   /**
-   * Get event
-   * @return event
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public EventRequest getEvent() {
-    return event;
-  }
-
-  public void setEvent(EventRequest event) {
-    this.event = event;
-  }
-
-  public Service recurpric(String recurpric) {
+  public ServiceRequest recurpric(String recurpric) {
     this.recurpric = recurpric;
     return this;
   }
@@ -151,28 +129,26 @@ public class Service   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Service service = (Service) o;
-    return Objects.equals(this.name, service.name) &&
-        Objects.equals(this.desc, service.desc) &&
-        Objects.equals(this.price, service.price) &&
-        Objects.equals(this.event, service.event) &&
-        Objects.equals(this.recurpric, service.recurpric);
+    ServiceRequest serviceRequest = (ServiceRequest) o;
+    return Objects.equals(this.name, serviceRequest.name) &&
+        Objects.equals(this.desc, serviceRequest.desc) &&
+        Objects.equals(this.price, serviceRequest.price) &&
+        Objects.equals(this.recurpric, serviceRequest.recurpric);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, desc, price, event, recurpric);
+    return Objects.hash(name, desc, price, recurpric);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Service {\n");
+    sb.append("class ServiceRequest {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    desc: ").append(toIndentedString(desc)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    event: ").append(toIndentedString(event)).append("\n");
     sb.append("    recurpric: ").append(toIndentedString(recurpric)).append("\n");
     sb.append("}");
     return sb.toString();

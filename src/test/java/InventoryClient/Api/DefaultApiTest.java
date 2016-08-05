@@ -29,12 +29,16 @@ import InventoryClient.ApiException;
 import InventoryClient.model.InventoryGroup;
 import InventoryClient.model.Error;
 import InventoryClient.model.Response;
-import InventoryClient.model.Dictionary;
 import InventoryClient.model.Category;
 import InventoryClient.model.Item;
+import InventoryClient.model.ItemRequest;
+import java.io.File;
 import java.math.BigDecimal;
 import InventoryClient.model.Order;
+import InventoryClient.model.OrderRequest;
 import InventoryClient.model.Service;
+import InventoryClient.model.ServiceRequest;
+import InventoryClient.model.Variation;
 import InventoryClient.model.EventRequest;
 import org.junit.Test;
 
@@ -92,7 +96,7 @@ public class DefaultApiTest {
      */
     @Test
     public void categoriesPostTest() throws ApiException {
-        Dictionary query = null;
+        Category query = null;
         // List<Category> response = api.categoriesPost(query);
 
         // TODO: test validations
@@ -125,7 +129,7 @@ public class DefaultApiTest {
      */
     @Test
     public void itemAddPostTest() throws ApiException {
-        Item item = null;
+        ItemRequest item = null;
         // Item response = api.itemAddPost(item);
 
         // TODO: test validations
@@ -141,7 +145,7 @@ public class DefaultApiTest {
      */
     @Test
     public void itemAddbulkPostTest() throws ApiException {
-        List<Item> items = null;
+        List<ItemRequest> items = null;
         // Response response = api.itemAddbulkPost(items);
 
         // TODO: test validations
@@ -172,9 +176,58 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
+    public void itemGetTest() throws ApiException {
+        String id = null;
+        // Item response = api.itemGet(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void itemMediaDeleteTest() throws ApiException {
+        String imageurl = null;
+        // Response response = api.itemMediaDelete(imageurl);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * This endpoint is currently in testing.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void itemMediaPostTest() throws ApiException {
+        String id = null;
+        File image = null;
+        // String response = api.itemMediaPost(id, image);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void itemPutTest() throws ApiException {
         String id = null;
-        Dictionary item = null;
+        ItemRequest item = null;
         // Response response = api.itemPut(id, item);
 
         // TODO: test validations
@@ -190,8 +243,10 @@ public class DefaultApiTest {
      */
     @Test
     public void itemsCountPostTest() throws ApiException {
-        Dictionary query = null;
-        // BigDecimal response = api.itemsCountPost(query);
+        BigDecimal minprice = null;
+        BigDecimal maxprice = null;
+        ItemRequest query = null;
+        // BigDecimal response = api.itemsCountPost(minprice, maxprice, query);
 
         // TODO: test validations
     }
@@ -206,24 +261,10 @@ public class DefaultApiTest {
      */
     @Test
     public void itemsPostTest() throws ApiException {
-        Dictionary query = null;
-        // List<Item> response = api.itemsPost(query);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void itemsallfieldsPostTest() throws ApiException {
-        Dictionary query = null;
-        // List<Dictionary> response = api.itemsallfieldsPost(query);
+        BigDecimal minprice = null;
+        BigDecimal maxprice = null;
+        ItemRequest query = null;
+        // List<Item> response = api.itemsPost(minprice, maxprice, query);
 
         // TODO: test validations
     }
@@ -238,8 +279,24 @@ public class DefaultApiTest {
      */
     @Test
     public void ordersPostTest() throws ApiException {
-        Dictionary query = null;
+        OrderRequest query = null;
         // List<Order> response = api.ordersPost(query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ordersServicesPostTest() throws ApiException {
+        OrderRequest query = null;
+        // List<Order> response = api.ordersServicesPost(query);
 
         // TODO: test validations
     }
@@ -260,30 +317,8 @@ public class DefaultApiTest {
         String search = null;
         BigDecimal minprice = null;
         BigDecimal maxprice = null;
-        Dictionary query = null;
+        ItemRequest query = null;
         // List<Item> response = api.queryPost(page, categoryid, sort, search, minprice, maxprice, query);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void queryallfieldsPostTest() throws ApiException {
-        BigDecimal page = null;
-        String categoryid = null;
-        String sort = null;
-        String search = null;
-        BigDecimal minprice = null;
-        BigDecimal maxprice = null;
-        Dictionary query = null;
-        // List<Dictionary> response = api.queryallfieldsPost(page, categoryid, sort, search, minprice, maxprice, query);
 
         // TODO: test validations
     }
@@ -328,8 +363,24 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
+    public void servicesOpenGetTest() throws ApiException {
+        String id = null;
+        // Service response = api.servicesOpenGet(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void servicesPostTest() throws ApiException {
-        Service service = null;
+        ServiceRequest service = null;
         // Service response = api.servicesPost(service);
 
         // TODO: test validations
@@ -346,8 +397,74 @@ public class DefaultApiTest {
     @Test
     public void servicesPutTest() throws ApiException {
         String id = null;
-        Service service = null;
+        ServiceRequest service = null;
         // Response response = api.servicesPut(id, service);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void variationDeleteTest() throws ApiException {
+        String id = null;
+        // Response response = api.variationDelete(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void variationGetTest() throws ApiException {
+        String id = null;
+        // Variation response = api.variationGet(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void variationPostTest() throws ApiException {
+        String id = null;
+        Variation item = null;
+        // Response response = api.variationPost(id, item);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void variationPutTest() throws ApiException {
+        String id = null;
+        Variation item = null;
+        // Response response = api.variationPut(id, item);
 
         // TODO: test validations
     }
